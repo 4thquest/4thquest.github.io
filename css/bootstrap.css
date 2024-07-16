@@ -44,7 +44,7 @@
   --bs-info-rgb: 62, 214, 207;;
   --bs-warning-rgb: 255, 193, 7;
   --bs-danger-rgb: 220, 53, 69;
-  --bs-light-rgb: 249, 250, 254;
+  --bs-light-rgb: 245, 250, 252;
   --bs-dark-rgb: 25, 30, 71;
   --bs-white-rgb: 255, 255, 255;
   --bs-grey-rgb: 248, 249, 250;
@@ -5396,7 +5396,7 @@ textarea.form-control-lg {
   --bs-modal-header-border-width: 1px;
   --bs-modal-title-line-height: 1.7;
   --bs-modal-footer-gap: 0.5rem;
-  --bs-modal-footer-bg: ;
+  --bs-modal-footer-bg: #cbe6f7;
   --bs-modal-footer-border-color: var(--bs-border-color);
   --bs-modal-footer-border-width: 1px;
   position: fixed;
