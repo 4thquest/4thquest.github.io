@@ -8315,6 +8315,10 @@ textarea.form-control-lg {
   word-break: break-word !important;
 }
 
+.text-gold {
+  --bs-text-opacity: 1;
+  color: rgba(252, 226, 91, var(--bs-text-opacity)) !important;
+}
 /* rtl:end:remove */
 .text-primary {
   --bs-text-opacity: 1;
