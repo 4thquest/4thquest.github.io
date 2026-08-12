@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" prefix="og: https://ogp.me/ns#">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Talks and Content: PlatformCon, CodeMash and SpringOne sessions | Fourth Quest</title>
+    <meta name="description" content="Conference talks, demos and technical writing from Fourth Quest: One-Click 15-Factor Apps at PlatformCon 2026, Who Moved My Mug at CodeMash 2026, and three years of SpringOne, with slides and code." />
+    <link rel="canonical" href="https://fourthquest.com/talks.html" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://fourthquest.com/talks.html" />
+    <meta property="og:title" content="Talks and Content: PlatformCon, CodeMash and SpringOne sessions | Fourth Quest" />
+    <meta property="og:description" content="Conference talks, demos and technical writing from Fourth Quest: One-Click 15-Factor Apps at PlatformCon 2026, Who Moved My Mug at CodeMash 2026, and three years of SpringOne, with slides and code." />
+    <meta property="og:image" content="https://fourthquest.com/images/4Q-home-page-clip-art.jpeg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/font-awesome.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/fq.css" />
+    <link rel="icon" href="images/favicon.png" />
+  </head>
+
+  <body class="fq" data-page="talks">
+    <a class="fq-skip" href="#main">Skip to content</a>
+
+    <!-- ===================== NAV (identical on every page) ===================== -->
+    <header class="fq-nav">
+      <div class="fq-wrap fq-nav__inner">
+        <a class="fq-nav__brand" href="index.html" aria-label="Fourth Quest home">
+          <img src="images/4thQuest-Logo-BrandBlue.png" alt="Fourth Quest" width="173" height="40" />
+        </a>
+
+        <div class="fq-nav__collapse" id="fq-menu">
+          <ul class="fq-nav__menu">
+            <li class="fq-nav__item">
+              <a class="fq-nav__link" data-nav="home" href="index.html">Home</a>
+            </li>
+
+            <li class="fq-nav__item">
+              <button
+                class="fq-nav__link"
+                type="button"
+                data-nav="products"
+                data-fq-panel-toggle
+                aria-expanded="false"
+                aria-controls="fq-products"
+              >
+                Products
+                <i class="fas fa-chevron-down fq-nav__caret" aria-hidden="true"></i>
+              </button>
+
+              <div class="fq-panel" id="fq-products">
+                <div class="fq-panel__grid">
+                  <a class="fq-panel__item" href="products/gizmo-guard.html">
+                    <span class="fq-panel__name">
+                      Gizmo Guard
+                      <span class="fq-badge fq-badge--build">In development</span>
+                    </span>
+                    <p class="fq-panel__desc">Edge AI that runs local models on-device.</p>
+                  </a>
+                  <a class="fq-panel__item" href="products/mip.html">
+                    <span class="fq-panel__name">
+                      MIP
+                      <span class="fq-badge fq-badge--soon">Coming soon</span>
+                    </span>
+                    <p class="fq-panel__desc">In early development. Details to follow.</p>
+                  </a>
+                  <a class="fq-panel__item" href="products/devx-platform.html">
+                    <span class="fq-panel__name">
+                      DevX Platform
+                      <span class="fq-badge fq-badge--soon">Coming soon</span>
+                    </span>
+                    <p class="fq-panel__desc">
+                      Internal developer platform with golden paths, scaffolding and a service catalog.
+                    </p>
+                  </a>
+                  <a class="fq-panel__item" href="products/ai-lms.html">
+                    <span class="fq-panel__name">
+                      AI-Powered LMS
+                      <span class="fq-badge fq-badge--soon">Coming soon</span>
+                    </span>
+                    <p class="fq-panel__desc">
+                      Learning platform for technical teams, with AI assistance.
+                    </p>
+                  </a>
+                </div>
+                <div class="fq-panel__foot">
+                  <span class="fq-mono">4 products · 1 in development</span>
+                  <a class="fq-link" href="products.html">
+                    All products <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li class="fq-nav__item">
+              <a class="fq-nav__link" data-nav="services" href="services.html">Services</a>
+            </li>
+            <li class="fq-nav__item">
+              <a class="fq-nav__link" data-nav="open-source" href="open-source.html">Open Source</a>
+            </li>
+            <li class="fq-nav__item">
+              <a class="fq-nav__link" data-nav="training" href="training.html">Training</a>
+            </li>
+            <li class="fq-nav__item">
+              <a class="fq-nav__link" data-nav="talks" href="talks.html">Talks &amp; Content</a>
+            </li>
+            <li class="fq-nav__item">
+              <a class="fq-nav__link" data-nav="about" href="about.html">About</a>
+            </li>
+          </ul>
+
+          <div class="fq-nav__actions">
+            <a class="fq-btn fq-btn--outline" href="contact.html">Contact</a>
+            <a class="fq-btn fq-btn--primary" href="contact.html#schedule">Book time</a>
+          </div>
+        </div>
+
+        <div class="fq-nav__actions">
+          <a class="fq-btn fq-btn--outline" href="contact.html">Contact</a>
+          <a class="fq-btn fq-btn--primary" href="contact.html#schedule">Book time</a>
+        </div>
+
+        <button
+          class="fq-nav__toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="fq-menu"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
+    </header>
+
+    <main id="main">
+
+      <section class="fq-pagehead">
+        <div class="fq-wrap">
+          <nav class="fq-crumbs" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <span aria-hidden="true">/</span>
+            <span>Talks &amp; Content</span>
+          </nav>
+          <h1 class="fq-h1">Talks &amp; Content</h1>
+          <p class="fq-pagehead__sub">Conference sessions, demos and writing, from PlatformCon and CodeMash back through three years of SpringOne. Every talk ships with its slides, and most with runnable code. The demo is the argument.</p>
+        </div>
+      </section>
+
+      <!-- ===================== 01 · RECENT TALKS ===================== -->
+      <section class="fq-section fq-section--tight-bottom">
+        <div class="fq-wrap">
+          <div class="fq-head fq-head--tight fq-reveal">
+            <p class="fq-eyebrow" data-index="01">Recent talks</p>
+            <p>
+              Two 2026 sessions, both live and demo-driven: governed self-service platforms, and
+              AI running on hardware you can hold.
+            </p>
+          </div>
+
+          <div class="fq-cols">
+
+            <article class="fq-talk fq-reveal">
+              <div class="fq-talk__meta">
+                <span class="fq-talk__event">PlatformCon 2026</span>
+              </div>
+              <div class="fq-media">
+                <iframe
+                  src="https://www.youtube.com/embed/3MDCF0_3NR4"
+                  title="One-click 15-factor apps governed, PlatformCon 2026"
+                  loading="lazy"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <h2>One-Click 15-Factor Apps, Governed</h2>
+              <p>
+                Internal developer portals are good at scaffolding new services. They are much
+                worse at what happens next, as those services drift from standards and accumulate
+                debt. This live session builds a next-generation developer experience on a
+                customized Backstage platform, where one click provisions a production-grade
+                15-factor Spring Boot microservice end to end: OAuth2, observability, an OpenAPI
+                spec, Jenkins CI/CD, Helm deployment to Kubernetes, and TechDocs. Open Policy
+                Agent then governs the service after deployment so it stays compliant over time,
+                with GenAI tooling wired into the platform.
+              </p>
+              <div class="fq-btn-row">
+                <a class="fq-link" href="https://sasiperi.github.io/#platformcon-abstract" target="_blank" rel="noopener">Abstract <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                <a class="fq-link" href="https://sasiperi.github.io/docs/PlatformConf-OneClick-Apps.pdf" target="_blank" rel="noopener">Slides <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                <a class="fq-link" href="https://2026.platformcon.com/sessions/one-click-15-factor-apps-governed-demo-devx-platforms-with-opa-and-a-pinch-of-ai" target="_blank" rel="noopener">Session page <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+              </div>
+              <p class="fq-small">
+                Related: our <a href="products/devx-platform.html">DevX Platform</a> product and
+                <a href="services.html#devx">DevX services</a>.
+              </p>
+            </article>
+
+            <article class="fq-talk fq-reveal">
+              <div class="fq-talk__meta">
+                <span class="fq-talk__event">CodeMash 2026</span>
+              </div>
+              <div class="fq-media">
+                <iframe
+                  src="https://www.youtube.com/embed/ZfrUOa-RVZE"
+                  title="Who Moved My Mug? Teaching a Raspberry Pi to spy, with Spring AI. CodeMash 2026"
+                  loading="lazy"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <h2>Who Moved My Mug?</h2>
+              <p>
+                What happens when Spring AI meets a Raspberry Pi, a camera and a pinch of GenAI?
+                You get a small agent that sees, thinks and reacts in real time. A Pi-attached
+                camera captures the scene, Spring AI describes it in natural language, and changes
+                get detected and acted on. Close to zero budget, motion detection with no extra
+                sensors, and no external API keys, because the models run locally and no data
+                leaves the network. This is the work behind
+                <a href="products/gizmo-guard.html">Gizmo Guard</a>.
+              </p>
+              <div class="fq-btn-row">
+                <a class="fq-link" href="https://sasiperi.github.io/#gizmo-abstract" target="_blank" rel="noopener">Abstract <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                <a class="fq-link" href="https://sasiperi.github.io/docs/GizmoGuard-SpyTheMug.pdf" target="_blank" rel="noopener">Slides <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                <a class="fq-link" href="https://dev.to/sasiperi/gizmo-guard-safeguard-bot-powered-by-gemma4-200" target="_blank" rel="noopener">Blog post <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+              </div>
+              <p class="fq-small">
+                CodeMash does not record sessions, so this is a demo recording. More decks from the
+                event are in the
+                <a href="https://github.com/codemash-conference/session-slides/blob/main/2026/README.md" target="_blank" rel="noopener">CodeMash 2026 slides repo</a>.
+              </p>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 02 · PAST TALKS / SPRINGONE ================= -->
+      <section class="fq-section fq-section--soft fq-section--tight-top">
+        <div class="fq-wrap">
+          <div class="fq-head fq-head--tight fq-reveal">
+            <p class="fq-eyebrow" data-index="02">Past talks</p>
+            <h2 class="fq-h2">SpringOne</h2>
+            <p>Three consecutive years on the SpringOne program, 2019 through 2021.</p>
+          </div>
+
+          <div class="fq-cols">
+
+            <article class="fq-talk fq-reveal">
+              <div class="fq-talk__meta">
+                <span class="fq-talk__event">SpringOne 2021</span>
+              </div>
+              <div class="fq-media">
+                <iframe
+                  src="https://www.youtube.com/embed/SSNquxkjQyo"
+                  title="Quantum Computing &amp; Java"
+                  loading="lazy"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <h2>Quantum Computing &amp; Java</h2>
+              <p>Quantum computing opens up problems classical machines cannot reach, bounded by time and computational complexity rather than engineering effort. This session looks at what that means from a Java developer's seat, using the Strange API.</p>
+              <div class="fq-btn-row">
+                <a class="fq-link" href="https://sasiperi.github.io/#qc-strange-abstract" target="_blank" rel="noopener">Abstract <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                <a class="fq-link" href="https://sasiperi.github.io/#qc-strange-slides" target="_blank" rel="noopener">Slides <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+              </div>
+            </article>
+
+            <article class="fq-talk fq-reveal">
+              <div class="fq-talk__meta">
+                <span class="fq-talk__event">SpringOne 2020</span>
+              </div>
+              <div class="fq-media">
+                <iframe
+                  src="https://www.youtube.com/embed/akSr7495A3k"
+                  title="Spring Extensibility &amp; an Alexa Order Tracking App"
+                  loading="lazy"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <h2>Spring Extensibility &amp; an Alexa Order Tracking App</h2>
+              <p>The Spring Framework is built to be extended. This session builds a secure voice application, an Alexa order tracking system, by writing a custom starter, showing how far the extensibility model will carry you.</p>
+              <div class="fq-btn-row">
+                <a class="fq-link" href="https://sasiperi.github.io/#alexa-boot-abstract" target="_blank" rel="noopener">Abstract <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                <a class="fq-link" href="https://sasiperi.github.io/#alexa-boot-slides" target="_blank" rel="noopener">Slides <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                <a class="fq-link" href="https://github.com/sasiperi/alexa-spring-boot" target="_blank" rel="noopener">Code <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+              </div>
+            </article>
+
+            <article class="fq-talk fq-reveal">
+              <div class="fq-talk__meta">
+                <span class="fq-talk__event">SpringOne 2019</span>
+              </div>
+              <div class="fq-media">
+                <iframe
+                  src="https://www.youtube.com/embed/r2vs20QLVw8"
+                  title="Feature Toggling with FF4J"
+                  loading="lazy"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <h2>Feature Toggling with FF4J</h2>
+              <p>Feature toggling lets you enable or disable system behavior at runtime, decoupling deployment from release. A practical look at doing it with FF4J on Spring Boot without the toggle debt that usually follows.</p>
+              <div class="fq-btn-row">
+                <a class="fq-link" href="https://sasiperi.github.io/#ff4j-abstract" target="_blank" rel="noopener">Abstract <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                <a class="fq-link" href="https://sasiperi.github.io/#ff4j-slides" target="_blank" rel="noopener">Slides <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                <a class="fq-link" href="https://github.com/sasiperi/FeatureToggle-Boot2" target="_blank" rel="noopener">Code <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+              </div>
+            </article>
+
+            <article class="fq-talk fq-reveal">
+              <div class="fq-talk__meta">
+                <span class="fq-talk__event">SpringOne 2021</span>
+              </div>
+              <div class="fq-media">
+                <video controls preload="metadata" title="Quantum Computing and Java, session pitch">
+                  <source src="media/S1P-Promo-Video.mp4" type="video/mp4" />
+                </video>
+              </div>
+              <h2>Quantum Computing and Java, session pitch</h2>
+              <p>A 35-second summary of the quantum computing and Java APIs session.</p>
+              <div class="fq-btn-row">
+                <a class="fq-link" href="https://sasiperi.github.io/#qc-strange-abstract" target="_blank" rel="noopener">Abstract <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="fq-section">
+        <div class="fq-wrap">
+          <div class="fq-split">
+            <div class="fq-reveal">
+              <p class="fq-eyebrow" data-index="03">Community</p>
+              <h2 class="fq-h3">User groups &amp; webinars</h2>
+              <p class="fq-lead fq-mt-4">
+                Beyond the conference circuit, we present at the Cleveland Java User Group and run
+                technical webinars with industry experts. If your user group or internal engineering
+                forum wants a session, just ask. We say yes more often than not.
+              </p>
+              <div class="fq-btn-row fq-mt-5">
+                <a class="fq-btn fq-btn--outline" href="contact.html?topic=Speaking%20request">
+                  Invite us to speak
+                </a>
+              </div>
+            </div>
+
+            <div class="fq-reveal">
+              <p class="fq-eyebrow" data-index="04">Writing</p>
+              <h2 class="fq-h3">Blog &amp; slides</h2>
+              <p class="fq-lead fq-mt-4">
+                Longer-form technical writing, plus the slide decks and abstracts for every session
+                above.
+              </p>
+              <div class="fq-stack fq-mt-5">
+                <a class="fq-card fq-card--link" href="https://sasiperi.github.io/blog/" target="_blank" rel="noopener">
+                  <h3 class="fq-card__title">
+                    Blog <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                  </h3>
+                  <p class="fq-card__body">Technical articles and notes.</p>
+                </a>
+                <a class="fq-card fq-card--link" href="https://sasiperi.github.io/" target="_blank" rel="noopener">
+                  <h3 class="fq-card__title">
+                    Slides &amp; abstracts
+                    <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                  </h3>
+                  <p class="fq-card__body">Decks and session abstracts for all talks.</p>
+                </a>
+                <a class="fq-card fq-card--link" href="https://www.youtube.com/@4thquest" target="_blank" rel="noopener">
+                  <h3 class="fq-card__title">
+                    YouTube <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                  </h3>
+                  <p class="fq-card__body">Recorded sessions and demos.</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="fq-section">
+        <div class="fq-wrap">
+          <div class="fq-cta fq-reveal">
+            <h2 class="fq-h2">Want a session for your team or event?</h2>
+            <p>We speak at conferences, user groups and internal engineering forums. Tell us the audience and we will suggest a topic.</p>
+            <div class="fq-btn-row">
+              <a class="fq-btn fq-btn--on-ink fq-btn--lg" href="contact.html#schedule">
+                <i class="fas fa-calendar-check" aria-hidden="true"></i> Book a 30-min call
+              </a>
+              <a class="fq-btn fq-btn--on-ink-outline fq-btn--lg" href="contact.html">
+                Send a message
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ==================== FOOTER (identical on every page) ==================== -->
+    <footer class="fq-footer">
+      <div class="fq-wrap">
+        <div class="fq-footer__grid">
+          <div class="fq-footer__brand">
+            <img src="images/4thQuest-Logo-BrandBlue.png" alt="Fourth Quest" width="147" height="34" />
+            <p class="fq-footer__tagline">Quest beyond the basic needs.</p>
+            <div class="fq-social">
+              <a
+                href="https://www.linkedin.com/company/fourth-quest-llc/about/"
+                target="_blank"
+                rel="noopener"
+                aria-label="Fourth Quest on LinkedIn"
+              >
+                <i class="fab fa-linkedin" aria-hidden="true"></i>
+              </a>
+              <a
+                href="https://github.com/sasiperi"
+                target="_blank"
+                rel="noopener"
+                aria-label="Fourth Quest on GitHub"
+              >
+                <i class="fab fa-github" aria-hidden="true"></i>
+              </a>
+              <a
+                href="https://www.youtube.com/@4thquest"
+                target="_blank"
+                rel="noopener"
+                aria-label="Fourth Quest on YouTube"
+              >
+                <i class="fab fa-youtube" aria-hidden="true"></i>
+              </a>
+              <a
+                href="https://x.com/speri350"
+                target="_blank"
+                rel="noopener"
+                aria-label="Fourth Quest on X"
+              >
+                <i class="fab fa-square-x-twitter" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h3>Build</h3>
+            <ul>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="open-source.html">Open Source</a></li>
+              <li><a href="services.html">Services</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3>Learn</h3>
+            <ul>
+              <li><a href="training.html">Training</a></li>
+              <li><a href="talks.html">Talks &amp; Content</a></li>
+              <li>
+                <a href="https://sasiperi.github.io/blog/" target="_blank" rel="noopener">Blog</a>
+              </li>
+              <li>
+                <a
+                  href="https://www.udemy.com/courses/search/?price=price-free&amp;q=%22sasi+peri%22&amp;sort=relevance&amp;src=ukw"
+                  target="_blank"
+                  rel="noopener"
+                  >Udemy courses</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3>Company</h3>
+            <ul>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="contact.html#schedule">Book time</a></li>
+              <li><a href="mailto:sp.fourth.quest@gmail.com">Email us</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="fq-footer__base">
+          <p>&copy; 2024–2026 Fourth Quest, LLC. All rights reserved.</p>
+          <nav aria-label="Legal">
+            <a href="#">Terms of use</a>
+            <a href="#">Privacy</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+    <button class="fq-totop" type="button" aria-label="Back to top">
+      <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <script src="js/fq.js"></script>
+  </body>
+</html>
