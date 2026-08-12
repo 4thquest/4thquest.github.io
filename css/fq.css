@@ -54,7 +54,7 @@
   --fq-step-2: clamp(1.25rem, 1.16rem + 0.45vw, 1.5rem);
   --fq-step-3: clamp(1.5rem, 1.34rem + 0.8vw, 2rem);
   --fq-step-4: clamp(1.875rem, 1.6rem + 1.4vw, 2.75rem);
-  --fq-step-5: clamp(2.25rem, 1.75rem + 2.5vw, 4rem);
+  --fq-step-5: clamp(2rem, 1.6rem + 2.1vw, 3.375rem);
 
   /* Space */
   --fq-1: 0.25rem;
@@ -75,7 +75,7 @@
   --fq-shadow-lg: 0 18px 44px -12px rgba(25, 30, 71, 0.18);
   --fq-ease: cubic-bezier(0.22, 0.61, 0.36, 1);
 
-  --fq-nav-h: 72px;
+  --fq-nav-h: 88px;
 }
 
 /* --------------------------------------------------------------------------
@@ -795,7 +795,7 @@ body.fq .fq-btn--on-ink-outline:hover {
 }
 
 .fq-nav__brand img {
-  height: 40px;
+  height: 48px;
   width: auto;
   display: block;
 }
@@ -814,9 +814,9 @@ body.fq .fq-nav__link {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  padding: 0.5rem 0.75rem;
+  padding: 0.55rem 0.7rem;
   border-radius: var(--fq-radius-sm);
-  font-size: 0.9375rem;
+  font-size: 1rem;
   font-weight: 500;
   color: var(--fq-ink);
   white-space: nowrap;
@@ -825,6 +825,14 @@ body.fq .fq-nav__link {
   cursor: pointer;
   font-family: var(--fq-sans);
   transition: background 0.15s var(--fq-ease), color 0.15s var(--fq-ease);
+}
+
+.fq-nav .fq-wrap {
+  max-width: 1260px;
+}
+
+.fq-nav__actions .fq-btn {
+  padding-inline: 1.15rem;
 }
 
 body.fq .fq-nav__link:hover {
@@ -1317,23 +1325,23 @@ a.fq-spec__row:hover {
    -------------------------------------------------------------------------- */
 
 .fq-pillars {
+  --fq-pcols: 6;
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(var(--fq-pcols), minmax(0, 1fr));
   border-top: 1px solid var(--fq-line);
-  border-bottom: 1px solid var(--fq-line);
+  border-left: 1px solid var(--fq-line);
   background: var(--fq-bg-softer);
 }
 
+/* Shared hairline edges, same model as .fq-cells, so the column count can
+   change without hand-tuning which borders to drop. */
 .fq-pillar {
   padding: var(--fq-5) var(--fq-4);
   border-right: 1px solid var(--fq-line);
+  border-bottom: 1px solid var(--fq-line);
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
-}
-
-.fq-pillar:last-child {
-  border-right: 0;
 }
 
 .fq-pillar__num {
@@ -1348,6 +1356,7 @@ a.fq-spec__row:hover {
   font-weight: 600;
   color: var(--fq-ink);
   letter-spacing: -0.015em;
+  text-wrap: balance;
 }
 
 .fq-pillar__desc {
@@ -1357,27 +1366,21 @@ a.fq-spec__row:hover {
   color: var(--fq-muted);
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1140px) {
   .fq-pillars {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  .fq-pillar {
-    border-bottom: 1px solid var(--fq-line);
-  }
-  .fq-pillar:nth-child(2n) {
-    border-right: 0;
-  }
-  .fq-pillar:last-child {
-    border-bottom: 0;
+    --fq-pcols: 3;
   }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 760px) {
   .fq-pillars {
-    grid-template-columns: 1fr;
+    --fq-pcols: 2;
   }
-  .fq-pillar {
-    border-right: 0;
+}
+
+@media (max-width: 480px) {
+  .fq-pillars {
+    --fq-pcols: 1;
   }
 }
 
