@@ -44,6 +44,13 @@
             </li>
 
             <li class="fq-nav__item">
+              <a class="fq-nav__link" data-nav="open-source" href="../open-source.html">Open Source</a>
+            </li>
+            <li class="fq-nav__item">
+              <a class="fq-nav__link" data-nav="services" href="../services.html">Services</a>
+            </li>
+
+            <li class="fq-nav__item">
               <button
                 class="fq-nav__link"
                 type="button"
@@ -99,13 +106,6 @@
                 </div>
               </div>
             </li>
-
-            <li class="fq-nav__item">
-              <a class="fq-nav__link" data-nav="services" href="../services.html">Services</a>
-            </li>
-            <li class="fq-nav__item">
-              <a class="fq-nav__link" data-nav="open-source" href="../open-source.html">Open Source</a>
-            </li>
             <li class="fq-nav__item">
               <a class="fq-nav__link" data-nav="training" href="../training.html">Training</a>
             </li>
@@ -157,7 +157,7 @@
         </div>
       </section>
 
-      <section class="fq-section">
+      <section class="fq-section fq-section--tight-bottom">
         <div class="fq-wrap">
           <div class="fq-split">
             <div class="fq-prose fq-reveal">
@@ -222,6 +222,10 @@
                   <span class="fq-spec__key">Source</span>
                   <span class="fq-spec__val">Research repo public</span>
                 </div>
+                <div class="fq-spec__row">
+                  <span class="fq-spec__key">Demo</span>
+                  <span class="fq-spec__val">CodeMash 2026 · prototype</span>
+                </div>
               </div>
 
               <div class="fq-card fq-mt-5">
@@ -237,12 +241,67 @@
                   Or book 30 minutes
                 </a>
               </div>
+
+              <a class="fq-btn fq-btn--outline fq-btn--block fq-mt-5" href="../products.html">
+                <i class="fas fa-arrow-left" aria-hidden="true"></i> All products
+              </a>
             </aside>
           </div>
         </div>
       </section>
 
-      <section class="fq-section">
+      <!-- ======================= SEE IT WORKING ======================= -->
+      <section class="fq-section fq-section--soft fq-section--tight-top fq-section--tight-bottom">
+        <div class="fq-wrap">
+          <div class="fq-head fq-head--tight fq-reveal">
+            <p class="fq-eyebrow fq-eyebrow--plain">See it working</p>
+            <h2 class="fq-h3">An early prototype, on camera</h2>
+            <p>
+              Worth being clear about what this is: a proof of concept, demoed live at CodeMash
+              2026. It is a long way from the product. What it does show is the core idea running
+              end to end on real hardware.
+            </p>
+          </div>
+
+          <div class="fq-split fq-reveal">
+            <div class="fq-media">
+              <iframe
+                src="https://www.youtube.com/embed/ZfrUOa-RVZE"
+                title="Who Moved My Mug? Teaching a Raspberry Pi to spy, with Spring AI. CodeMash 2026"
+                loading="lazy"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+
+            <div>
+              <p class="fq-lead fq-mt-0">
+                A Raspberry Pi with a camera, a Spring Boot app, and Spring AI describing the scene
+                in natural language, then reacting when something changes.
+              </p>
+              <ul class="fq-check fq-mt-5">
+                <li>Motion detection with no extra sensors</li>
+                <li>Models running locally, no external API keys</li>
+                <li>No data leaving the network</li>
+                <li>Close to zero hardware budget</li>
+              </ul>
+              <div class="fq-btn-row fq-mt-6">
+                <a class="fq-btn fq-btn--outline" href="../talks.html">
+                  Full talk <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </a>
+                <a class="fq-link" href="https://dev.to/sasiperi/gizmo-guard-safeguard-bot-powered-by-gemma4-200" target="_blank" rel="noopener">
+                  Write-up <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                </a>
+                <a class="fq-link" href="https://sasiperi.github.io/docs/GizmoGuard-SpyTheMug.pdf" target="_blank" rel="noopener">
+                  Slides <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="fq-section fq-section--tight-top">
         <div class="fq-wrap">
           <div class="fq-cta fq-reveal">
             <h2 class="fq-h2">Building something adjacent?</h2>

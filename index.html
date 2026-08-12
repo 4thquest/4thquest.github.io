@@ -50,6 +50,13 @@
             </li>
 
             <li class="fq-nav__item">
+              <a class="fq-nav__link" data-nav="open-source" href="open-source.html">Open Source</a>
+            </li>
+            <li class="fq-nav__item">
+              <a class="fq-nav__link" data-nav="services" href="services.html">Services</a>
+            </li>
+
+            <li class="fq-nav__item">
               <button
                 class="fq-nav__link"
                 type="button"
@@ -104,13 +111,6 @@
                   </a>
                 </div>
               </div>
-            </li>
-
-            <li class="fq-nav__item">
-              <a class="fq-nav__link" data-nav="services" href="services.html">Services</a>
-            </li>
-            <li class="fq-nav__item">
-              <a class="fq-nav__link" data-nav="open-source" href="open-source.html">Open Source</a>
             </li>
             <li class="fq-nav__item">
               <a class="fq-nav__link" data-nav="training" href="training.html">Training</a>
@@ -171,8 +171,8 @@
               </p>
 
               <div class="fq-btn-row fq-in fq-in-5">
-                <a class="fq-btn fq-btn--primary fq-btn--lg" href="products.html">
-                  See what we build <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                <a class="fq-btn fq-btn--primary fq-btn--lg" href="#open-source">
+                  See what we build <i class="fas fa-arrow-down" aria-hidden="true"></i>
                 </a>
                 <a class="fq-btn fq-btn--outline fq-btn--lg" href="contact.html#schedule">
                   Book a 30-min call
@@ -188,10 +188,6 @@
                 <span>What we do</span>
                 <span>Est. 2024</span>
               </div>
-              <a class="fq-spec__row" href="products.html">
-                <span class="fq-spec__key">Products</span>
-                <span class="fq-spec__val">4 in the works</span>
-              </a>
               <a class="fq-spec__row" href="open-source.html">
                 <span class="fq-spec__key">Open source</span>
                 <span class="fq-spec__val">Java · Spring · TS</span>
@@ -199,6 +195,10 @@
               <a class="fq-spec__row" href="services.html">
                 <span class="fq-spec__key">Services</span>
                 <span class="fq-spec__val">8 practice areas</span>
+              </a>
+              <a class="fq-spec__row" href="products.html">
+                <span class="fq-spec__key">Products</span>
+                <span class="fq-spec__val">4 incubating</span>
               </a>
               <a class="fq-spec__row" href="training.html">
                 <span class="fq-spec__key">Training</span>
@@ -251,88 +251,11 @@
         </div>
       </section>
 
-      <!-- ============================ PRODUCTS =========================== -->
-      <section class="fq-section" id="products">
-        <div class="fq-wrap">
-          <div class="fq-head fq-reveal">
-            <p class="fq-eyebrow" data-index="01">Products</p>
-            <h2 class="fq-h2">Software we are building ourselves</h2>
-            <p>
-              Fourth Quest is a product incubator first. These are in active development. Follow
-              along, or tell us if one solves a problem you have.
-            </p>
-          </div>
-
-          <div class="fq-cells fq-cells--2 fq-reveal">
-            <a class="fq-cell" href="products/gizmo-guard.html">
-              <span class="fq-cell__icon" aria-hidden="true">
-                <i class="fas fa-shield-halved"></i>
-              </span>
-              <h3 class="fq-cell__title">
-                Gizmo Guard <span class="fq-badge fq-badge--build">In development</span>
-              </h3>
-              <p class="fq-cell__body">
-                Edge AI that keeps inference on the device. Built on small local models, so data
-                never has to leave the hardware it was collected on.
-              </p>
-              <span class="fq-cell__go">
-                Learn more <i class="fas fa-arrow-right" aria-hidden="true"></i>
-              </span>
-            </a>
-
-            <a class="fq-cell" href="products/mip.html">
-              <span class="fq-cell__icon" aria-hidden="true"><i class="fas fa-cube"></i></span>
-              <h3 class="fq-cell__title">
-                MIP <span class="fq-badge fq-badge--soon">Coming soon</span>
-              </h3>
-              <p class="fq-cell__body">
-                In early development. We'll publish details as the shape of the product settles.
-              </p>
-              <span class="fq-cell__go">
-                Learn more <i class="fas fa-arrow-right" aria-hidden="true"></i>
-              </span>
-            </a>
-
-            <a class="fq-cell" href="products/devx-platform.html">
-              <span class="fq-cell__icon" aria-hidden="true">
-                <i class="fas fa-layer-group"></i>
-              </span>
-              <h3 class="fq-cell__title">
-                DevX Platform <span class="fq-badge fq-badge--soon">Coming soon</span>
-              </h3>
-              <p class="fq-cell__body">
-                An internal developer platform: one place for tooling, service catalog, tech radar
-                and docs, with self-service provisioning and scaffolders that carry your standards.
-              </p>
-              <span class="fq-cell__go">
-                Learn more <i class="fas fa-arrow-right" aria-hidden="true"></i>
-              </span>
-            </a>
-
-            <a class="fq-cell" href="products/ai-lms.html">
-              <span class="fq-cell__icon" aria-hidden="true">
-                <i class="fas fa-graduation-cap"></i>
-              </span>
-              <h3 class="fq-cell__title">
-                AI-Powered LMS <span class="fq-badge fq-badge--soon">Coming soon</span>
-              </h3>
-              <p class="fq-cell__body">
-                A learning platform for engineering teams, drawing on our training practice and
-                applying AI to curriculum, assessment and pacing.
-              </p>
-              <span class="fq-cell__go">
-                Learn more <i class="fas fa-arrow-right" aria-hidden="true"></i>
-              </span>
-            </a>
-          </div>
-        </div>
-      </section>
-
       <!-- =========================== OPEN SOURCE ========================= -->
-      <section class="fq-section fq-section--soft" id="open-source">
+      <section class="fq-section" id="open-source">
         <div class="fq-wrap">
           <div class="fq-head fq-reveal">
-            <p class="fq-eyebrow" data-index="02">Open Source</p>
+            <p class="fq-eyebrow" data-index="01">Open Source</p>
             <h2 class="fq-h2">Code you can read before you call us</h2>
             <p>
               The most honest thing an engineering company can show is its source. Ours is public,
@@ -438,10 +361,10 @@
       </section>
 
       <!-- ============================ SERVICES =========================== -->
-      <section class="fq-section" id="services">
+      <section class="fq-section fq-section--soft" id="services">
         <div class="fq-wrap">
           <div class="fq-head fq-reveal">
-            <p class="fq-eyebrow" data-index="03">Services</p>
+            <p class="fq-eyebrow" data-index="02">Services</p>
             <h2 class="fq-h2">The same engineering, pointed at your problem</h2>
             <p>
               Eight practice areas. Most engagements start as a short, scoped piece of work: an
@@ -499,6 +422,83 @@
           <div class="fq-btn-row fq-mt-6 fq-reveal">
             <a class="fq-btn fq-btn--outline" href="services.html">
               How we engage <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================ PRODUCTS =========================== -->
+      <section class="fq-section" id="products">
+        <div class="fq-wrap">
+          <div class="fq-head fq-reveal">
+            <p class="fq-eyebrow" data-index="03">Products</p>
+            <h2 class="fq-h2">Software we are building ourselves</h2>
+            <p>
+              Fourth Quest is a product incubator first. These are in active development. Follow
+              along, or tell us if one solves a problem you have.
+            </p>
+          </div>
+
+          <div class="fq-cells fq-cells--2 fq-reveal">
+            <a class="fq-cell" href="products/gizmo-guard.html">
+              <span class="fq-cell__icon" aria-hidden="true">
+                <i class="fas fa-shield-halved"></i>
+              </span>
+              <h3 class="fq-cell__title">
+                Gizmo Guard <span class="fq-badge fq-badge--build">In development</span>
+              </h3>
+              <p class="fq-cell__body">
+                Edge AI that keeps inference on the device. Built on small local models, so data
+                never has to leave the hardware it was collected on.
+              </p>
+              <span class="fq-cell__go">
+                Learn more <i class="fas fa-arrow-right" aria-hidden="true"></i>
+              </span>
+            </a>
+
+            <a class="fq-cell" href="products/mip.html">
+              <span class="fq-cell__icon" aria-hidden="true"><i class="fas fa-cube"></i></span>
+              <h3 class="fq-cell__title">
+                MIP <span class="fq-badge fq-badge--soon">Coming soon</span>
+              </h3>
+              <p class="fq-cell__body">
+                In early development. We'll publish details as the shape of the product settles.
+              </p>
+              <span class="fq-cell__go">
+                Learn more <i class="fas fa-arrow-right" aria-hidden="true"></i>
+              </span>
+            </a>
+
+            <a class="fq-cell" href="products/devx-platform.html">
+              <span class="fq-cell__icon" aria-hidden="true">
+                <i class="fas fa-layer-group"></i>
+              </span>
+              <h3 class="fq-cell__title">
+                DevX Platform <span class="fq-badge fq-badge--soon">Coming soon</span>
+              </h3>
+              <p class="fq-cell__body">
+                An internal developer platform: one place for tooling, service catalog, tech radar
+                and docs, with self-service provisioning and scaffolders that carry your standards.
+              </p>
+              <span class="fq-cell__go">
+                Learn more <i class="fas fa-arrow-right" aria-hidden="true"></i>
+              </span>
+            </a>
+
+            <a class="fq-cell" href="products/ai-lms.html">
+              <span class="fq-cell__icon" aria-hidden="true">
+                <i class="fas fa-graduation-cap"></i>
+              </span>
+              <h3 class="fq-cell__title">
+                AI-Powered LMS <span class="fq-badge fq-badge--soon">Coming soon</span>
+              </h3>
+              <p class="fq-cell__body">
+                A learning platform for engineering teams, drawing on our training practice and
+                applying AI to curriculum, assessment and pacing.
+              </p>
+              <span class="fq-cell__go">
+                Learn more <i class="fas fa-arrow-right" aria-hidden="true"></i>
+              </span>
             </a>
           </div>
         </div>

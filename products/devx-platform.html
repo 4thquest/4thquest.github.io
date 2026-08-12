@@ -44,6 +44,13 @@
             </li>
 
             <li class="fq-nav__item">
+              <a class="fq-nav__link" data-nav="open-source" href="../open-source.html">Open Source</a>
+            </li>
+            <li class="fq-nav__item">
+              <a class="fq-nav__link" data-nav="services" href="../services.html">Services</a>
+            </li>
+
+            <li class="fq-nav__item">
               <button
                 class="fq-nav__link"
                 type="button"
@@ -99,13 +106,6 @@
                 </div>
               </div>
             </li>
-
-            <li class="fq-nav__item">
-              <a class="fq-nav__link" data-nav="services" href="../services.html">Services</a>
-            </li>
-            <li class="fq-nav__item">
-              <a class="fq-nav__link" data-nav="open-source" href="../open-source.html">Open Source</a>
-            </li>
             <li class="fq-nav__item">
               <a class="fq-nav__link" data-nav="training" href="../training.html">Training</a>
             </li>
@@ -157,7 +157,7 @@
         </div>
       </section>
 
-      <section class="fq-section">
+      <section class="fq-section fq-section--tight-bottom">
         <div class="fq-wrap">
           <div class="fq-split">
             <div class="fq-prose fq-reveal">
@@ -225,6 +225,10 @@
                   <span class="fq-spec__key">Available now</span>
                   <span class="fq-spec__val">As a service</span>
                 </div>
+                <div class="fq-spec__row">
+                  <span class="fq-spec__key">Demo</span>
+                  <span class="fq-spec__val">PlatformCon 2026</span>
+                </div>
               </div>
 
               <div class="fq-card fq-mt-5">
@@ -240,12 +244,72 @@
                   Or book 30 minutes
                 </a>
               </div>
+
+              <a class="fq-btn fq-btn--outline fq-btn--block fq-mt-5" href="../products.html">
+                <i class="fas fa-arrow-left" aria-hidden="true"></i> All products
+              </a>
             </aside>
           </div>
         </div>
       </section>
 
-      <section class="fq-section">
+      <!-- ======================= SEE IT WORKING ======================= -->
+      <section class="fq-section fq-section--soft fq-section--tight-top fq-section--tight-bottom">
+        <div class="fq-wrap">
+          <div class="fq-head fq-head--tight fq-reveal">
+            <p class="fq-eyebrow fq-eyebrow--plain">See it working</p>
+            <h2 class="fq-h3">A customized platform, demoed live</h2>
+            <p>
+              This is not a mockup. At PlatformCon 2026 we walked through a Backstage platform
+              customized to one organization's standards, provisioning real services against a real
+              cluster. It is the capability this product packages, and it is available as a service
+              today.
+            </p>
+          </div>
+
+          <div class="fq-split fq-reveal">
+            <div class="fq-media">
+              <iframe
+                src="https://www.youtube.com/embed/3MDCF0_3NR4"
+                title="One-click 15-factor apps governed, PlatformCon 2026"
+                loading="lazy"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+
+            <div>
+              <p class="fq-lead fq-mt-0">
+                One click scaffolds a production-grade 15-factor Spring Boot service, provisioned
+                end to end. Open Policy Agent then governs it after deployment, so it stays
+                compliant as it evolves.
+              </p>
+              <ul class="fq-check fq-mt-5">
+                <li>OAuth2, observability and an OpenAPI spec, built in</li>
+                <li>Jenkins CI/CD and Helm deployment to Kubernetes</li>
+                <li>TechDocs generated alongside the service</li>
+                <li>Post-deployment policy governance with OPA</li>
+              </ul>
+              <div class="fq-btn-row fq-mt-6">
+                <a class="fq-btn fq-btn--outline" href="../talks.html">
+                  Full talk <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </a>
+                <a class="fq-btn fq-btn--primary" href="../services.html#devx">
+                  Available as a service <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </a>
+              </div>
+              <p class="fq-small fq-mt-5">
+                <a href="https://2026.platformcon.com/sessions/one-click-15-factor-apps-governed-demo-devx-platforms-with-opa-and-a-pinch-of-ai" target="_blank" rel="noopener">
+                  PlatformCon 2026 session page
+                  <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="fq-section fq-section--tight-top">
         <div class="fq-wrap">
           <div class="fq-cta fq-reveal">
             <h2 class="fq-h2">Building something adjacent?</h2>
