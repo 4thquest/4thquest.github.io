@@ -1509,13 +1509,81 @@ body.fq a.fq-row:hover {
 }
 
 .fq-media iframe,
-.fq-media video {
+.fq-media video,
+.fq-media img {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   border: 0;
   display: block;
+}
+
+.fq-media img {
+  object-fit: cover;
+}
+
+/* Click-to-play facade. The YouTube iframe is only inserted on click, so the
+   player's idle state (which overlays the video's YouTube title) never shows,
+   and no third-party script or cookie loads until the visitor asks for it. */
+.fq-lite {
+  cursor: pointer;
+}
+
+.fq-lite__btn {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  border: 0;
+  padding: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(25, 30, 71, 0.05),
+    rgba(25, 30, 71, 0.35)
+  );
+  cursor: pointer;
+  transition: background 0.2s var(--fq-ease);
+}
+
+.fq-lite__btn:hover {
+  background: linear-gradient(
+    180deg,
+    rgba(25, 30, 71, 0.15),
+    rgba(25, 30, 71, 0.45)
+  );
+}
+
+.fq-lite__play {
+  display: grid;
+  place-items: center;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: var(--fq-blue);
+  color: #fff;
+  font-size: 1.1rem;
+  padding-left: 4px;
+  box-shadow: 0 6px 20px rgba(25, 30, 71, 0.35);
+  transition: transform 0.2s var(--fq-ease), background 0.2s var(--fq-ease);
+}
+
+.fq-lite__btn:hover .fq-lite__play {
+  transform: scale(1.08);
+  background: var(--fq-blue-700);
+}
+
+.fq-lite__btn:focus-visible {
+  outline: 3px solid var(--fq-blue);
+  outline-offset: -3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fq-lite__btn:hover .fq-lite__play {
+    transform: none;
+  }
 }
 
 .fq-talk {

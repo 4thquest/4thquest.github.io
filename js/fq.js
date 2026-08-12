@@ -172,6 +172,41 @@
     });
   }
 
+  /* ------------------------------------------------- click-to-play video */
+
+  /* Swaps the poster for a real YouTube iframe on click. Keeps the player's
+     idle state (which overlays the video's YouTube title) off the page, and
+     defers all third-party loading until the visitor actually wants it. */
+  function initLiteVideo() {
+    var frames = document.querySelectorAll('.fq-lite[data-yt]');
+
+    Array.prototype.forEach.call(frames, function (box) {
+      var btn = box.querySelector('.fq-lite__btn');
+      if (!btn) return;
+
+      btn.addEventListener('click', function () {
+        var id = box.getAttribute('data-yt');
+        var title = box.getAttribute('data-yt-title') || 'Video';
+        var iframe = document.createElement('iframe');
+
+        iframe.src =
+          'https://www.youtube-nocookie.com/embed/' +
+          encodeURIComponent(id) +
+          '?autoplay=1&rel=0';
+        iframe.title = title;
+        iframe.allow =
+          'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+        iframe.allowFullscreen = true;
+        iframe.setAttribute('frameborder', '0');
+
+        box.innerHTML = '';
+        box.appendChild(iframe);
+        box.classList.remove('fq-lite');
+        iframe.focus();
+      });
+    });
+  }
+
   /* -------------------------------------------------------- back to top */
 
   function initToTop() {
@@ -199,6 +234,7 @@
     initNav();
     initActiveNav();
     initReveal();
+    initLiteVideo();
     initToTop();
   }
 
