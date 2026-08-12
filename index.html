@@ -1,716 +1,687 @@
 <!DOCTYPE html>
-<html lang="en" prefix="og: https://ogp.me/ns#">
+<html lang="en" class="no-js" prefix="og: https://ogp.me/ns#">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="type" property="og:type" content="website"/>
-    <meta property="og:url" content="www.fourthquest.com"/>
-    <meta name="title" property="og:title" content="For your Quest Beyond The Basic Needs!" />
-    <meta name="image" property="og:image" content="https://fourthquest.com/images/4Q-home-page-clip-art.jpeg" />
-    <meta name="description" property="og:description" content="Fourth Quest - Quest beyond the basic need. For Your R&D, Innovation and Learning Pathways"/>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fourth Quest | Technology Innovation Studio and Product Incubator</title>
+    <meta
+      name="description"
+      content="Fourth Quest is a technology innovation studio. We build products, engineer developer platforms, ship open source, teach engineering teams, and advise on architecture and applied AI."
+    />
+    <link rel="canonical" href="https://fourthquest.com/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://fourthquest.com/" />
+    <meta property="og:title" content="Fourth Quest | Technology Innovation Studio" />
+    <meta
+      property="og:description"
+      content="We build products, platforms and applied AI systems, open source our work, and teach what we learn."
+    />
+    <meta property="og:image" content="https://fourthquest.com/images/4Q-home-page-clip-art.jpeg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fourthquest.com/" crossorigin>
-    
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/font-awesome.css" />
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/fq.css" />
     <link rel="icon" href="images/favicon.png" />
-    <title>Fourth Quest LLC</title>
   </head>
-  <body>
-    <nav class="navbar navbar-expand-lg sticky-top navbar-light">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <img src="images/4thQuest-Full-DarkTag.png" alt="Fourth Quest" width="221" class="img-fluid" />
+
+  <body class="fq" data-page="home">
+    <a class="fq-skip" href="#main">Skip to content</a>
+
+    <!-- ===================== NAV (identical on every page) ===================== -->
+    <header class="fq-nav">
+      <div class="fq-wrap fq-nav__inner">
+        <a class="fq-nav__brand" href="index.html" aria-label="Fourth Quest home">
+          <img src="images/4thQuest-Logo-BrandBlue.png" alt="Fourth Quest" width="173" height="40" />
         </a>
+
+        <div class="fq-nav__collapse" id="fq-menu">
+          <ul class="fq-nav__menu">
+            <li class="fq-nav__item">
+              <a class="fq-nav__link" data-nav="home" href="index.html">Home</a>
+            </li>
+
+            <li class="fq-nav__item">
+              <button
+                class="fq-nav__link"
+                type="button"
+                data-nav="products"
+                data-fq-panel-toggle
+                aria-expanded="false"
+                aria-controls="fq-products"
+              >
+                Products
+                <i class="fas fa-chevron-down fq-nav__caret" aria-hidden="true"></i>
+              </button>
+
+              <div class="fq-panel" id="fq-products">
+                <div class="fq-panel__grid">
+                  <a class="fq-panel__item" href="products/gizmo-guard.html">
+                    <span class="fq-panel__name">
+                      Gizmo Guard
+                      <span class="fq-badge fq-badge--build">In development</span>
+                    </span>
+                    <p class="fq-panel__desc">Edge AI that runs local models on-device.</p>
+                  </a>
+                  <a class="fq-panel__item" href="products/mip.html">
+                    <span class="fq-panel__name">
+                      MIP
+                      <span class="fq-badge fq-badge--soon">Coming soon</span>
+                    </span>
+                    <p class="fq-panel__desc">In early development. Details to follow.</p>
+                  </a>
+                  <a class="fq-panel__item" href="products/devx-platform.html">
+                    <span class="fq-panel__name">
+                      DevX Platform
+                      <span class="fq-badge fq-badge--soon">Coming soon</span>
+                    </span>
+                    <p class="fq-panel__desc">
+                      Internal developer platform with golden paths, scaffolding and a service catalog.
+                    </p>
+                  </a>
+                  <a class="fq-panel__item" href="products/ai-lms.html">
+                    <span class="fq-panel__name">
+                      AI-Powered LMS
+                      <span class="fq-badge fq-badge--soon">Coming soon</span>
+                    </span>
+                    <p class="fq-panel__desc">
+                      Learning platform for technical teams, with AI assistance.
+                    </p>
+                  </a>
+                </div>
+                <div class="fq-panel__foot">
+                  <span class="fq-mono">4 products · 1 in development</span>
+                  <a class="fq-link" href="products.html">
+                    All products <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li class="fq-nav__item">
+              <a class="fq-nav__link" data-nav="services" href="services.html">Services</a>
+            </li>
+            <li class="fq-nav__item">
+              <a class="fq-nav__link" data-nav="open-source" href="open-source.html">Open Source</a>
+            </li>
+            <li class="fq-nav__item">
+              <a class="fq-nav__link" data-nav="training" href="training.html">Training</a>
+            </li>
+            <li class="fq-nav__item">
+              <a class="fq-nav__link" data-nav="talks" href="talks.html">Talks &amp; Content</a>
+            </li>
+            <li class="fq-nav__item">
+              <a class="fq-nav__link" data-nav="about" href="about.html">About</a>
+            </li>
+          </ul>
+
+          <div class="fq-nav__actions">
+            <a class="fq-btn fq-btn--outline" href="contact.html">Contact</a>
+            <a class="fq-btn fq-btn--primary" href="contact.html#schedule">Book time</a>
+          </div>
+        </div>
+
+        <div class="fq-nav__actions">
+          <a class="fq-btn fq-btn--outline" href="contact.html">Contact</a>
+          <a class="fq-btn fq-btn--primary" href="contact.html#schedule">Book time</a>
+        </div>
+
         <button
-          class="navbar-toggler"
+          class="fq-nav__toggle"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown"
           aria-expanded="false"
+          aria-controls="fq-menu"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <i class="fas fa-bars" aria-hidden="true"></i>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a href="index.html" class="nav-link">
-                <i class="fas fa-house fa-lg text-grey mx-2"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link"  href="#training">Training</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#consult">Consulting</a>
-            </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link" href="#products">Products</a>
-            </li> -->
-            <li class="nav-item">
-              <a class="nav-link" href="#events">Events</a>
-            </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link" href="#resources">Resources</a>
-            </li> -->
-            <li class="nav-item">
-              <a class="nav-link" href="aboutus.html">About Us</a>
-            </li>
-            <li class="nav-item">
-              <!--<a
-                class="nav-link btn btn-outline-primary px-4 mx-4" style="color:#027BCD;" 
-                onmouseover="this.style.color='#ffff'"
-                onmouseout="this.style.color='#027BCD'"
-                href="#contact"
-                >Book time</a
-              >-->
-              <a
-              class="nav-link btn btn-secondary px-4 mx-4" style="color:#ffff;" 
-              href="index.html#schedule">Schedule Time</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      
-    </nav>
-
-    <!-- Header -->
-    <header class="header position-relative mt-2 overflow-hidden">
-      <div></div>
-      <div class="container-fluid bg-primary text-white border border-info border-2">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 p-4">
-              <p class="text-gold" ">What is Fourth Quest?</p>
-              <p class="lead text-white">
-                Our name, Fourth Quest, is inspired by the Vedic Sanskrit word "<b>Tureeya,</b>" meaning "<b>The Fourth,</b>" 
-                which refers to the ultimate state of consciousness for a spiritual seeker. 
-                Similarly, in the material world, the quest for knowledge, learning, and innovation begins once the three basic needs food, clothing and shelter
-                are met. Thus, the name Fourth Quest symbolizes the journey beyond basic needs towards the pursuit of knowledge and improvement.
-                We aim to be your partner in research and learning, driving innovation and excellence.
-              </p>
-              <p class="text-gold p-cursive float-end" style="font-size:larger">
-                Quest beyond the basic needs...
-              </p>
-            </div>
-           </div>
-        </div> 
-      </div>
-      <div class="container position-relative z-3">
-        <div class="row">
-          <div class="col-lg-8 float-lg-start">
-            <div class="mt-6">
-              <h5>Empowering clients with innovative solutions</h5>
-              <p class="mb-4"> At Fourth Quest, we help you go beyond the basics and achieve excellence through innovative solutions and continuous learning. 
-                With over 20 years of experience in delivering cutting-edge software solutions and hands-on approach to solving complex technical problems, 
-                our mission is to drive efficiency, foster innovation, and build a dynamic learning environment.</p>
-              
-              <a href="aboutus.html" class="btn btn-primary btn-lg m-2">
-                Learn More
-              </a>
-              <a href="#contact" class="btn btn-secondary btn-lg m-2">
-                Contact Us
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="image-container d-flex mt-5">
-              <img src="images/4Q-abstract-pathway-innovate-02.jpeg" alt="" class="img-fluid float-end"/>
-            </div>
-          </div>
-        </div>
       </div>
     </header>
-    
-    <br/><br/>
 
-    <!-- Training -->
-    <section id="training-s" class="intro bg-light py-4">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 offset-lg-2 text-center">
-            <a class="anchor" id="training"></a>
-            <h2 class="text-primary">
-              Your <span class="text-secondary">Learning</span> Pathways
-            </h2>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Learn Details-->
-    <section
-      id="learn-details"
-      class="details position-relative my-3 overflow-hidden">
-     
-      <!-- Online -->
-      <div class="container position-relative z-3">
-       
-        <div class="row">
-          <div class="col-lg-7">
-            <div class="mt-5">
-              <h4>
-                Online Courses and Tutorials 
-              </h4>
-              <ul class="list-unstyled">
-                <li class="d-flex">
-                  <i class="fas fa-check text-primary fa-2x mx-2"></i>
-                  <p>
-                    Access our comprehensive courses and tutorials on Udemy, designed to upskill your teams and keep them ahead of the curve.
-                  </p>
-                </li>
-                <li class="d-flex">
-                  <i class="fas fa-check text-primary fa-2x mx-2"></i>
-                  <p>
-                    Request for an online course that is tailored to your needs.
-                  </p>
-                </li>
-              </ul>
-             </div>
-              <!-- Learn More About Training -->
-              <p class="text-secondary mx-3">
-                  Explore our tutorials, sample curricula, and sample videos
-                  <a href="./training.html" class="mx-2 btn btn-primary">Explore</a>  
+    <main id="main">
+      <!-- ============================== HERO ============================== -->
+      <section class="fq-hero">
+        <div class="fq-wrap">
+          <div class="fq-hero__inner">
+            <div>
+              <p class="fq-hero__status fq-in fq-in-1">
+                <span class="fq-hero__pulse" aria-hidden="true"></span>
+                Technology Innovation Studio
               </p>
-         
-          </div>
-          <div class="col-lg-5">
-            <div class="image-container d-flex justify-content-center">
-              <img src="images/4Q-online-tutoring-02.jpg" alt="" height="275" width="310" />
-            </div>
-          </div>
-     </div>
-       
-     <!-- Corporate Training-->
-     <div class="row py-1">
-      <div class="col-lg-7">
-        <div class="mt-5">
-          <h4>
-            Corporate Training Programs 
-          </h4>
-          <ul class="list-unstyled">
-            <li class="d-flex">
-              <i class="fas fa-check text-primary fa-2x mx-2"></i>
-              <p>
-                Build a strong learning culture in your organization.
+
+              <h1 class="fq-h1 fq-in fq-in-2">
+                We build products, platforms,<br class="d-none d-lg-inline" />
+                and <span class="fq-accent">applied AI systems</span>.
+              </h1>
+
+              <p class="fq-hero__sub fq-in fq-in-3">
+                Fourth Quest is a product incubator and engineering practice. We ship our own
+                software, build developer platforms, contribute to open source, and teach what we
+                learn. Then we bring that same engineering to client work.
               </p>
-            </li>
-            <li class="d-flex">
-              <i class="fas fa-check text-primary fa-2x mx-2"></i>
-              <p>
-                We provide learning paths, customized curricula in Java, Spring, cloud-native apps, containerization, DevSecOps, and SRE etc.
-              </p>
-            </li>
-            <li class="d-flex">
-              <i class="fas fa-check text-primary fa-2x mx-2"></i>
-              <p>
-                Tailored trainings, workshops.
-              </p>
-            </li>
-           </ul>
-          </div>
-          <p class="text-secondary mx-3">
-            Contact now for your training needs
-            <a href="#contact" class="mx-2 btn btn-primary">Contact</a>
-        </p>
-      </div>
-      <div class="col-lg-5 mt-4">
-        <div class="image-container d-flex justify-content-center">
-          <img src="images/4Q-corp-train-1.jpg" alt="" height="280" width="310"/>
-        </div>
-      </div>
-    </div>
-    <!-- Learn More About Training -->
-    <!-- <div class="row">
-      <div class="col-lg-9">
-         <p class="text-secondary">
-            <b>Explore our tutorials, sample curricula, and sample videos</b>
-            <a href="./training.html" class="mx-2 btn btn-primary">Explore</a>  
-         </p>
-         
-      </div>
-     </div> -->
 
-  </div>
-</section>
-
-
- <!-- Consulting Services-->
- <section id="consult-s" class="intro bg-light py-5">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 offset-lg-2 text-center">
-        <a class="anchor" id="consult"></a>
-        <h2 class="text-primary">
-          Our <span class="text-secondary">Professional</span> Services
-        </h2>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Consulting Details-->
-<section
-      id="learn-details"
-      class="details position-relative my-3 overflow-hidden">
-  <div class="container position-relative z-3">
-    <div class="row">
-      <div class="col-lg-7">
-        <div class="mt-4">
-          <h3>
-            <!-- <span class="text-secondary">Service</span> --> Service areas
-          </h3>
-          <p>
-            From R&D, POCs and architectural advice to build cloud native applications, DevSecOps and code reviews, 
-            we offer tailored solutions to elevate your tech capabilities.
-          </p>
-          <div class="row float-lg-start align-items-left">
-            <div class="col-md-3 d-flex flex-column align-items-center text-center">
-              <span class="fa-stack fa-2x text-secondary mb-2">
-                <i class="fas fa-search fa-stack-2x"></i>
-                <i class="fas fa-lightbulb fa-search-stack-1x"></i>
-              </span>
-              <p class="fs-5">R&D & POC</p>
-            </div>
-            <div class="col-md-3 d-flex flex-column align-items-center text-center">
-              <i class="fas fa-diagram-project fa-4x text-secondary mb-2"></i>
-              <p class="fs-5">As-Is Assessment & Architecture Advice</p>
-            </div>
-            <div class="col-md-3 d-flex flex-column align-items-center text-center">
-              <span class="fa-stack fa-2x text-secondary mb-2">
-                <i class="fas fa-display fa-stack-2x"></i>
-                <i class="fas fa-code fa-search-stack-1x"></i>
-                <!-- <i class="fa-brands fa-docker fa-search-stack-1x"></i> -->
-              </span>
-              <p class="fs-5">Application Development</p>
-            </div>
-            <div class="col-md-3 d-flex flex-column align-items-center text-center">
-              <i class="fas fa-inverse fa-cloud fa-4x text-secondary mb-2"></i>
-              <p class="fs-5">Cloud Computing</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-3 d-flex flex-column align-items-center text-center">
-              <i class="fas fa-code-branch fa-4x text-secondary mb-2"></i>
-              <p class="fs-5">DevSecOps & SRE</p>
-            </div>
-            <div class="col-md-3 d-flex flex-column align-items-center text-center">
-              <i class="fas fa-tools fa-4x text-secondary mb-2"></i>
-              <p class="fs-5">DevX & IDP</p>
-            </div>
-            <div class="col-md-3 d-flex flex-column align-items-center text-center">
-              <span class="fa-stack fa-2x text-secondary mb-2">
-                <i class="fas fa-search fa-stack-2x"></i>
-                <i class="fas fa-code fa-search-stack-1x"></i>
-              </span>
-              <p class="fs-5">Code Reviews</p>
-            </div>
-            <div class="col-md-3 d-flex flex-column align-items-center text-center">
-              <i class="fas fa-microchip fa-4x text-secondary mb-2"></i>
-              <p class="fs-5">AI</p> 
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-5 py-5 float-end">
-        <div class="image-container d-flex justify-content-end">
-          <img src="images/4Q-consutancy-services-0.png" alt=""  class="img-fluid"/>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- Services details-->
-<section id="services" class="services py-4">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-10">
-        <div class="text-container text-center text-lg-start">
-          <ul class="list-unstyled">
-            <li class="d-flex">
-              <i class="fas fa-check text-primary fa-2x mx-4"></i>
-              <p>
-                <span class="fx-bold text-primary">R&D Services:</span> 
-                At Fourth Quest, we assist companies in researching and exploring new technologies by building proof of concepts (POCs).
-                This allows your team to focus on your core tech stack and delivering functionality, while we handle innovative advancements.
-              </p>
-            </li>
-            <li class="d-flex">
-              <i class="fas fa-check text-primary fa-2x mx-4"></i>
-              <p>
-                <span class="fx-bold text-primary">As-Is Assessment & Architecture Advice:</span>
-                Planning to rebuild or refactor your systems? We conduct thorough assessments and provide architecture advice, 
-                whether migrating from a legacy monolith to microservices or evaluating third-party systems for quality.
-              </p>
-            </li>
-            <li class="d-flex">
-              <i class="fas fa-check text-primary fa-2x mx-4"></i>
-              <p>
-                <span class="fx-bold text-primary">Cloud Computing:</span> 
-                We support your cloud migration journey by helping to build roadmaps and strategies tailored to your cloud provider(s).
-              </p>
-            </li>
-            <li class="d-flex">
-              <i class="fas fa-check text-primary fa-2x mx-4"></i>
-              <p>
-                <span class="fx-bold text-primary">DevSecOps:</span> We help set up robust DevSecOps and CI/CD pipelines 
-                to streamline your development and deployment processes.
-              </p>
-            </li>
-            <li class="d-flex">
-              <i class="fas fa-check text-primary fa-2x mx-4"DevX ></i>
-              <p> 
-                <span class="fx-bold text-primary">Developer Experience(DevX)/Internal Development Portals(IDP): </span>
-                If you like to create one-stop-shop for Dev-Sec-Ops by unifying all tooling, services, tech radars, product catalogs, 
-                and documentation into a single platform with consistant UI; Enable self-service based provisioning; 
-                Accelerate development with application scaffolders with your standards and best practices baked into it? Please contact us.
-
-              </p>
-            </li>
-            <li class="d-flex">
-              <i class="fas fa-check text-primary fa-2x mx-4"></i>
-              <p>
-                <span class="fx-bold text-primary">Application Development:</span> We can help in building cloud-native applications and 
-                microservices architectures using REST APIs, web services, messaging, and streaming services, leveraging Java/SpringBoot and platforms like Tanzu and Kubernetes.
-              </p>
-            </li>
-            <li class="d-flex">
-              <i class="fas fa-check text-primary fa-2x mx-4"></i>
-              <p>
-                <span class="fx-bold text-primary">Code Reviews:</span> Our expert code reviews go beyond automated tools like SonarQube to ensure the highest quality and performance of your software.
-              </p>
-            </li>
-            <li class="d-flex">
-              <i class="fas fa-check text-primary fa-2x mx-4"></i>
-              <p>
-                <span class="fx-bold text-primary">AI Integration:</span> Harness the power of AI with our expertise in building Java/Spring-AI applications. 
-                We apply Spring ecosystem design principles to the AI domain, promoting portability, modular design, and the use of POJOs as the building blocks of your AI solutions.
-              </p>
-            </li>
-          </ul>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-</section>
-
- <!-- Products -->
- <!-- <section id="products-s" class="intro bg-light py-5">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 offset-lg-2 text-center">
-        <a class="anchor" id="products"></a>
-        <h2 class="text-primary">
-          Our <span class="text-secondary">Products</span>
-        </h2>
-      </div>
-    </div>
-  </div>
-</section> -->
-
-  <!-- Details 2 -->
-  <!-- <section class="product-details position-relative my-6 overflow-hidden">
-    <div class="container position-relative z-3">
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="text-container text-center text-lg-start mb-7 mt-6">
-            <h2 class="text-danger">To be revealed soon!</h2>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="image-container d-flex justify-content-center">
-            <img src="images/4Q-stealth-mode-product.png" alt="" class="img-fluid" width="400"/>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
-
-<!-- Events -->
- <section id="events-s" class="intro bg-light py-4">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <a class="anchor" id="events"></a>
-        <h2 class="text-primary">
-          <span class="text-primary">Events</span>
-        </h2>
-      </div>
-    </div>
-  </div>
-</section>
-
- <!-- Event Details-->
- <section
- id="event-details"
- class="details position-relative my-3 overflow-hidden">
-    <div class="container position-relative z-3">
-      <!-- <div class="row">
-        <div class="col-lg-6 mt-4">
-            <h4 class="text-primary">
-              Upcoming events
-            </h4>
-        </div>
-      </div>
-    <section id="past-events" class="testimonials bg-light py-6">
-      <div>
-        <br/><br/> <br/><br/> <br/>
-      </div>
-    </section> -->
-
-    <!-- Corporate Training-->
-    <div class="row">
-      <div class="col-lg-6 mt-4">
-        <h4 class="text-secondary">
-            Past Events
-        </h4>
-      </div>
-    </div>
-  
-      <!-- Past Events -->
-      <section id="past-events" class="events mt-2">
-        <div id="pastEvents" class="container">
-          <div class="row mb-4">
-            <!-- S1P: 2021  -->
-            <div class="col-md-6">
-              <div class="card border-0 d-flex flex-column embed-responsive embed-responsive-21by9">
-                <div class="card-body">
-                  <p>
-                    <iframe src="https://www.youtube.com/embed/SSNquxkjQyo" width="400" height="220"
-                    title="QuantumCompute-StrangeAPI-SpringOne2021" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen></iframe>
-                  </p>
-                
-                  <h5 class="card-title">Quantum Computing & Java</h5>
-                  <p class="card-text">
-                    QC creates new possibilities that classical computers cannot, due to resource constraints; time & computations complexities.
-                    <a href="https://sasiperi.github.io/#qc-strange-abstract">Read More</a> & <a href="https://sasiperi.github.io/#qc-strange-slides">Slides</a>
-                  </p>
-                </div>
-                
+              <div class="fq-btn-row fq-in fq-in-4">
+                <a class="fq-btn fq-btn--primary fq-btn--lg" href="products.html">
+                  See what we build <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </a>
+                <a class="fq-btn fq-btn--outline fq-btn--lg" href="contact.html#schedule">
+                  Book a 30-min call
+                </a>
               </div>
+
+              <p class="fq-hero__tagline fq-in fq-in-5">Quest beyond the basic needs.</p>
             </div>
 
-            <!-- S1P: 2019 -->
-            <div class="col-md-6">
-              <div class="card border-0 d-flex flex-column embed-responsive embed-responsive-21by9">
-                <div class="card-body">
-                  <p>
-                    <iframe src="https://www.youtube.com/embed/r2vs20QLVw8" width="400" height="220"
-                      title="FF4J-FeatureToggles-SpringOne2019" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                      allowfullscreen></iframe>
-                  </p>
-                
-                  <h5 class="card-title">Feature Toggling with FF4J</h5>
-                  <p class="card-text">
-                    Feature toggling is a technique used to enable or disable certain behavior of the system (typically at runtime).
-                    <a href="https://sasiperi.github.io/#ff4j-abstract">Read More</a> & <a href="https://sasiperi.github.io/#ff4j-slides">Slides</a>
-                  </p>
-                </div>
+            <!-- Spec card: the 10-second answer to "what is this company?" -->
+            <div class="fq-spec fq-in fq-in-4">
+              <div class="fq-spec__head">
+                <span>What we do</span>
+                <span>Est. 2024</span>
               </div>
+              <a class="fq-spec__row" href="products.html">
+                <span class="fq-spec__key">Products</span>
+                <span class="fq-spec__val">4 in the works</span>
+              </a>
+              <a class="fq-spec__row" href="open-source.html">
+                <span class="fq-spec__key">Open source</span>
+                <span class="fq-spec__val">Java · Spring · TS</span>
+              </a>
+              <a class="fq-spec__row" href="services.html">
+                <span class="fq-spec__key">Services</span>
+                <span class="fq-spec__val">8 practice areas</span>
+              </a>
+              <a class="fq-spec__row" href="training.html">
+                <span class="fq-spec__key">Training</span>
+                <span class="fq-spec__val">Udemy · workshops</span>
+              </a>
+              <a class="fq-spec__row" href="talks.html">
+                <span class="fq-spec__key">Talks &amp; content</span>
+                <span class="fq-spec__val">SpringOne · CodeMash</span>
+              </a>
             </div>
           </div>
-          
-          <div class="row mb-4">
-            <!-- S1P: 2020 -->
-            <div class="col-md-6">
-              <div class="card border-0 d-flex flex-column embed-responsive embed-responsive-21by9">
-                <div class="card-body">
-                  <p">
-                    <iframe  src="https://www.youtube.com/embed/akSr7495A3k" width="400" height="220"
-                    title="Alexa-SpringBoot-SpringOne2020" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-                  </p>
-                
-                  <h5 class="card-title">Spring Extensibility & Alexa Order Tracking App</h5>
-                  <p class="card-text">
-                    Spring framework is very extensible, that allows you to create custom scafolders. 
-                    We will see how by building a secure talking app (Alexa Order Trackig System).
-                    <a href="https://sasiperi.github.io/#alexa-boot-abstract">Read More</a> & <a href="https://sasiperi.github.io/#alexa-boot-slides">Slides</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- S1P: 2021 - 30sec promotion -->
-            <div class="col-md-6">
-              <div class="card border-0 d-flex flex-column embed-responsive embed-responsive-21by9">
-                <div class="card-body">
-                  <p>
-                      <video width="400" height="220" controls>
-                        <source src="./media/S1P-Promo-Video.mp4" width="400" height="220" loading="lazy"
-                      title="FF4J-FeatureToggles-SpringOne2019" type="video/mp4">
-                      </video>
-                  </p>
-                
-                  <h5 class="card-title">QC & Java Talk Pitch</h5>
-                  <p class="card-text">
-                    Quick 35 sec  summary of QC and Java APIs.
-                    <a href="https://sasiperi.github.io/#qc-strange-abstract">Read More</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        
         </div>
       </section>
-  </section>
 
-  <section id="schedule-s" class="schedule py-4 position-relative">
-    <div class="container position-relative">
-      <a class="anchor" id="schedule"></a>
-      <h4 class="text-primary">Schedule Time for consultation</h4>
-      <!-- Calendly inline widget begin -->
-      <div class="calendly-inline-widget" data-url="https://calendly.com/sp-fourth-quest/4q-30?primary_color=027bcd" style="min-width:320px;height:700px;padding-top:0; margin-top:0;"></div>
-      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-      <!-- Calendly inline widget end -->
-    </div>
-  </section>
-
-
-  <!-- Contact -->
-  <section id="contact-s" class="contact py-5 position-relative">
-    <a class="anchor" id="contact"></a>
-    <div class="container position-relative z-3">
-      <div class="row">
-        <div class="col-lg-5 d-none d-md-block float-lg-start">
-          <div class="image-container">
-            <img src="images/4Q-home-page-clip-art.jpeg" alt="" class="img-fluid" />
+      <!-- ============================ PILLARS ============================ -->
+      <section aria-label="What Fourth Quest does">
+        <div class="fq-wrap">
+          <div class="fq-pillars">
+            <div class="fq-pillar">
+              <span class="fq-pillar__num">01</span>
+              <span class="fq-pillar__name">Build products</span>
+              <p class="fq-pillar__desc">Our own software, incubated end to end.</p>
+            </div>
+            <div class="fq-pillar">
+              <span class="fq-pillar__num">02</span>
+              <span class="fq-pillar__name">Build platforms</span>
+              <p class="fq-pillar__desc">Developer platforms and cloud-native foundations.</p>
+            </div>
+            <div class="fq-pillar">
+              <span class="fq-pillar__num">03</span>
+              <span class="fq-pillar__name">Build open source</span>
+              <p class="fq-pillar__desc">Libraries and starters, Apache-2.0, on Maven Central.</p>
+            </div>
+            <div class="fq-pillar">
+              <span class="fq-pillar__num">04</span>
+              <span class="fq-pillar__name">Share knowledge</span>
+              <p class="fq-pillar__desc">Courses, conference talks, and workshops.</p>
+            </div>
+            <div class="fq-pillar">
+              <span class="fq-pillar__num">05</span>
+              <span class="fq-pillar__name">Provide services</span>
+              <p class="fq-pillar__desc">Architecture, platform, and AI engineering.</p>
+            </div>
           </div>
         </div>
-        <div class="col-lg-7 float-end">
-          <div class="text-container">
-            <h2>Contact Us</h2>
-            <form class="gform pure-form pure-form-stacked" method="POST"
-            action="https://script.google.com/macros/s/AKfycbyAQwotgCBaD4edjrUXPrxbc0zuTmgCtB2Dylm6babFGa8fAXh9dkyJe2eomVXjHfX9tg/exec">
-              <div class="mb-3">
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  class="form-control"
-                  placeholder="Enter name"
-                />
-              </div>
-              <div style="display:none">
-                <input type="text" name="honeypot" value="" />
-              </div>
-              <div class="mb-3">
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  class="form-control"
-                  placeholder="Enter company email"
-                />
-              </div>
-              <div class="mb-3">
-                <input
-                  type="text"
-                  id="phone"
-                  name="phone"
-                  class="form-control"
-                  placeholder="Enter phone"
-                />
-              </div>
-              <div class="mb-3">
-                <textarea
-                  class="form-control"
-                  id="message"
-                  name="message"
-                  placeholder="Enter message"
-                  rows="8"
-                ></textarea>
-              </div>
-              <div class="d-grid gap-2">
-                <input
-                  type="submit"
-                  value="Send"
-                  class="btn btn-primary btn-block"
-                />
-              </div>
-              <div  style="display:none" class="thankyou_message py-3">
-                <!-- You can customize the thankyou message by editing the code below -->
-                <h5 class="text-secondary">Thank you for contacting us! We will get back to you soon!</h5>
+      </section>
+
+      <!-- ============================ PRODUCTS =========================== -->
+      <section class="fq-section" id="products">
+        <div class="fq-wrap">
+          <div class="fq-head fq-reveal">
+            <p class="fq-eyebrow" data-index="01">Products</p>
+            <h2 class="fq-h2">Software we are building ourselves</h2>
+            <p>
+              Fourth Quest is a product incubator first. These are in active development. Follow
+              along, or tell us if one solves a problem you have.
+            </p>
+          </div>
+
+          <div class="fq-cells fq-cells--2 fq-reveal">
+            <a class="fq-cell" href="products/gizmo-guard.html">
+              <span class="fq-cell__icon" aria-hidden="true">
+                <i class="fas fa-shield-halved"></i>
+              </span>
+              <h3 class="fq-cell__title">
+                Gizmo Guard <span class="fq-badge fq-badge--build">In development</span>
+              </h3>
+              <p class="fq-cell__body">
+                Edge AI that keeps inference on the device. Built on small local models, so data
+                never has to leave the hardware it was collected on.
+              </p>
+              <span class="fq-cell__go">
+                Learn more <i class="fas fa-arrow-right" aria-hidden="true"></i>
+              </span>
+            </a>
+
+            <a class="fq-cell" href="products/mip.html">
+              <span class="fq-cell__icon" aria-hidden="true"><i class="fas fa-cube"></i></span>
+              <h3 class="fq-cell__title">
+                MIP <span class="fq-badge fq-badge--soon">Coming soon</span>
+              </h3>
+              <p class="fq-cell__body">
+                In early development. We'll publish details as the shape of the product settles.
+              </p>
+              <span class="fq-cell__go">
+                Learn more <i class="fas fa-arrow-right" aria-hidden="true"></i>
+              </span>
+            </a>
+
+            <a class="fq-cell" href="products/devx-platform.html">
+              <span class="fq-cell__icon" aria-hidden="true">
+                <i class="fas fa-layer-group"></i>
+              </span>
+              <h3 class="fq-cell__title">
+                DevX Platform <span class="fq-badge fq-badge--soon">Coming soon</span>
+              </h3>
+              <p class="fq-cell__body">
+                An internal developer platform: one place for tooling, service catalog, tech radar
+                and docs, with self-service provisioning and scaffolders that carry your standards.
+              </p>
+              <span class="fq-cell__go">
+                Learn more <i class="fas fa-arrow-right" aria-hidden="true"></i>
+              </span>
+            </a>
+
+            <a class="fq-cell" href="products/ai-lms.html">
+              <span class="fq-cell__icon" aria-hidden="true">
+                <i class="fas fa-graduation-cap"></i>
+              </span>
+              <h3 class="fq-cell__title">
+                AI-Powered LMS <span class="fq-badge fq-badge--soon">Coming soon</span>
+              </h3>
+              <p class="fq-cell__body">
+                A learning platform for engineering teams, drawing on our training practice and
+                applying AI to curriculum, assessment and pacing.
+              </p>
+              <span class="fq-cell__go">
+                Learn more <i class="fas fa-arrow-right" aria-hidden="true"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================== OPEN SOURCE ========================= -->
+      <section class="fq-section fq-section--soft" id="open-source">
+        <div class="fq-wrap">
+          <div class="fq-head fq-reveal">
+            <p class="fq-eyebrow" data-index="02">Open Source</p>
+            <h2 class="fq-h2">Code you can read before you call us</h2>
+            <p>
+              The most honest thing an engineering company can show is its source. Ours is public,
+              Apache-2.0, and shipping on Maven Central.
+            </p>
+          </div>
+
+          <div class="fq-rows fq-reveal">
+            <a
+              class="fq-row"
+              href="https://github.com/sasiperi/log-safe-spring-boot"
+              target="_blank"
+              rel="noopener"
+            >
+              <div class="fq-row__main">
+                <h3 class="fq-row__title">
+                  log-safe-spring-boot
+                  <span class="fq-badge fq-badge--live">
+                    <span class="fq-badge__dot" aria-hidden="true"></span>1.0.0 GA
+                  </span>
+                </h3>
+                <p class="fq-row__desc">
+                  A Spring Boot starter that logs REST request and response detail with configurable
+                  redaction of sensitive fields, so you get useful logs without leaking PII.
+                </p>
+                <div class="fq-row__meta">
+                  <span><span class="fq-dot fq-dot--java" aria-hidden="true"></span> Java</span>
+                  <span>Apache-2.0</span>
+                  <span>Maven Central</span>
                 </div>
-            </form>
+              </div>
+              <div class="fq-row__aside">
+                <span class="fq-link">
+                  <i class="fab fa-github" aria-hidden="true"></i> GitHub
+                </span>
+              </div>
+            </a>
+
+            <a
+              class="fq-row"
+              href="https://github.com/sasiperi/alexa-spring-boot"
+              target="_blank"
+              rel="noopener"
+            >
+              <div class="fq-row__main">
+                <h3 class="fq-row__title">alexa-spring-boot</h3>
+                <p class="fq-row__desc">
+                  Spring Boot starter for building Alexa skills. It grew out of the extensibility work behind the
+                  SpringOne 2020 talk on Spring's scaffolding model.
+                </p>
+                <div class="fq-row__meta">
+                  <span><span class="fq-dot fq-dot--java" aria-hidden="true"></span> Java</span>
+                  <span>Apache-2.0</span>
+                  <span><i class="fas fa-star" aria-hidden="true"></i> 5</span>
+                </div>
+              </div>
+              <div class="fq-row__aside">
+                <span class="fq-link">
+                  <i class="fab fa-github" aria-hidden="true"></i> GitHub
+                </span>
+              </div>
+            </a>
+
+            <a
+              class="fq-row"
+              href="https://github.com/sasiperi/FeatureToggle-Boot2"
+              target="_blank"
+              rel="noopener"
+            >
+              <div class="fq-row__main">
+                <h3 class="fq-row__title">FeatureToggle-Boot2</h3>
+                <p class="fq-row__desc">
+                  Feature toggling with FF4J on Spring Boot 2. The reference implementation from the
+                  SpringOne 2019 session.
+                </p>
+                <div class="fq-row__meta">
+                  <span><span class="fq-dot fq-dot--java" aria-hidden="true"></span> Java</span>
+                  <span><i class="fas fa-star" aria-hidden="true"></i> 10</span>
+                </div>
+              </div>
+              <div class="fq-row__aside">
+                <span class="fq-link">
+                  <i class="fab fa-github" aria-hidden="true"></i> GitHub
+                </span>
+              </div>
+            </a>
+          </div>
+
+          <div class="fq-btn-row fq-mt-6 fq-reveal">
+            <a class="fq-btn fq-btn--green" href="open-source.html">
+              All open source projects <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
+            <a
+              class="fq-btn fq-btn--outline"
+              href="https://github.com/sasiperi"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fab fa-github" aria-hidden="true"></i> github.com/sasiperi
+            </a>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
-<footer class="modal-footer bg-light py-2">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4 my-2">
-        <p>Company</p>
-        <ul class="list-unstyled">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="aboutus.html">About Us</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
-        </ul>
-      </div>
-      <div class="col-md-4 my-5">
-        <ul class="list-unstyled">
-          <li><a href="https://sasiperi.github.io/#ff4j-slides" target="_blank">Slides</a></li>
-          <li><a href="https://sasiperi.github.io/blog/" target="_blank">Blogs</a></li>
-          <li><a href="mailto:sp.fourth.quest@gmail.com">Mail To</a></li>
-        </ul>
-      </div>
-      <div class="col-md-4 my-2">
-        <p>Social</p>
-          <ul class="list-unstyled  py-1">
-            <li>
-              <a href="https://www.linkedin.com/company/fourth-quest-llc/about/" class="text-decoration-none">
-                <i class="fab fa-linkedin fa-lg  mx-2  text-primary"></i>
+      <!-- ============================ SERVICES =========================== -->
+      <section class="fq-section" id="services">
+        <div class="fq-wrap">
+          <div class="fq-head fq-reveal">
+            <p class="fq-eyebrow" data-index="03">Services</p>
+            <h2 class="fq-h2">The same engineering, pointed at your problem</h2>
+            <p>
+              Eight practice areas. Most engagements start as a short, scoped piece of work: an
+              assessment, a proof of concept, a platform spike, not a long retainer.
+            </p>
+          </div>
+
+          <div class="fq-cells fq-cells--4 fq-reveal">
+            <a class="fq-cell" href="services.html#enterprise-architecture">
+              <span class="fq-cell__icon" aria-hidden="true">
+                <i class="fas fa-diagram-project"></i>
+              </span>
+              <h3 class="fq-cell__title">Enterprise Architecture</h3>
+              <p class="fq-cell__body">As-is assessment, target state, and a roadmap between them.</p>
+            </a>
+            <a class="fq-cell" href="services.html#platform-engineering">
+              <span class="fq-cell__icon" aria-hidden="true"><i class="fas fa-server"></i></span>
+              <h3 class="fq-cell__title">Platform Engineering</h3>
+              <p class="fq-cell__body">Paved roads that teams actually want to drive on.</p>
+            </a>
+            <a class="fq-cell" href="services.html#devx">
+              <span class="fq-cell__icon" aria-hidden="true"><i class="fas fa-tools"></i></span>
+              <h3 class="fq-cell__title">Developer Experience</h3>
+              <p class="fq-cell__body">Internal portals, scaffolders, and self-service tooling.</p>
+            </a>
+            <a class="fq-cell" href="services.html#devsecops">
+              <span class="fq-cell__icon" aria-hidden="true">
+                <i class="fas fa-code-branch"></i>
+              </span>
+              <h3 class="fq-cell__title">DevSecOps</h3>
+              <p class="fq-cell__body">CI/CD and security controls built into the pipeline.</p>
+            </a>
+            <a class="fq-cell" href="services.html#cloud-native">
+              <span class="fq-cell__icon" aria-hidden="true"><i class="fas fa-cloud"></i></span>
+              <h3 class="fq-cell__title">Cloud Native</h3>
+              <p class="fq-cell__body">Microservices, Kubernetes, and migration strategy.</p>
+            </a>
+            <a class="fq-cell" href="services.html#ai-engineering">
+              <span class="fq-cell__icon" aria-hidden="true"><i class="fas fa-microchip"></i></span>
+              <h3 class="fq-cell__title">AI Engineering</h3>
+              <p class="fq-cell__body">Spring AI, RAG and local models. Applied, not theoretical.</p>
+            </a>
+            <a class="fq-cell" href="services.html#prototyping">
+              <span class="fq-cell__icon" aria-hidden="true"><i class="fas fa-flask"></i></span>
+              <h3 class="fq-cell__title">Rapid Prototyping</h3>
+              <p class="fq-cell__body">R&amp;D and proofs of concept, so your team stays on roadmap.</p>
+            </a>
+            <a class="fq-cell" href="services.html#advisory">
+              <span class="fq-cell__icon" aria-hidden="true"><i class="fas fa-compass"></i></span>
+              <h3 class="fq-cell__title">Technical Advisory</h3>
+              <p class="fq-cell__body">Deep code reviews and architectural second opinions.</p>
+            </a>
+          </div>
+
+          <div class="fq-btn-row fq-mt-6 fq-reveal">
+            <a class="fq-btn fq-btn--outline" href="services.html">
+              How we engage <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================= TRAINING + TALKS ======================== -->
+      <section class="fq-section fq-section--soft">
+        <div class="fq-wrap">
+          <div class="fq-split">
+            <div class="fq-reveal">
+              <p class="fq-eyebrow" data-index="04">Training</p>
+              <h2 class="fq-h3">Courses, workshops, and corporate programs</h2>
+              <p class="fq-lead fq-mt-4">
+                Two decades of building systems, turned into curriculum. Free courses are on Udemy
+                today; custom workshops are built to your stack.
+              </p>
+              <ul class="fq-check fq-mt-5">
+                <li>Udemy courses, free and self-paced, open to anyone</li>
+                <li>Corporate programs in Java, Spring, cloud-native, DevSecOps and SRE</li>
+                <li>Architecture and AI workshops, tailored to your codebase</li>
+              </ul>
+              <div class="fq-btn-row fq-mt-6">
+                <a class="fq-btn fq-btn--primary" href="training.html">
+                  Browse training <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </a>
+                <a
+                  class="fq-btn fq-btn--outline"
+                  href="https://www.udemy.com/courses/search/?price=price-free&amp;q=%22sasi+peri%22&amp;sort=relevance&amp;src=ukw"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Free Udemy courses
+                  <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="fq-reveal">
+              <p class="fq-eyebrow" data-index="05">Talks &amp; Content</p>
+              <h2 class="fq-h3">Conference talks, demos, and writing</h2>
+              <p class="fq-lead fq-mt-4">
+                PlatformCon, CodeMash, three years of SpringOne, and the Cleveland Java User Group.
+                All recorded, with slides and runnable code alongside.
+              </p>
+
+              <div class="fq-media fq-mt-5">
+                <iframe
+                  src="https://www.youtube.com/embed/3MDCF0_3NR4"
+                  title="One-click 15-factor apps governed, PlatformCon 2026"
+                  loading="lazy"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <p class="fq-small fq-mt-4">
+                One-Click 15-Factor Apps, Governed. PlatformCon 2026, the most recent of six
+                recorded sessions.
+              </p>
+
+              <div class="fq-btn-row fq-mt-5">
+                <a class="fq-btn fq-btn--outline" href="talks.html">
+                  All talks &amp; content <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================== CTA ============================== -->
+      <section class="fq-section">
+        <div class="fq-wrap">
+          <div class="fq-cta fq-reveal">
+            <p class="fq-eyebrow fq-eyebrow--plain" style="color: rgba(255, 255, 255, 0.6)">
+              Get in touch
+            </p>
+            <h2 class="fq-h2">Have a problem worth engineering?</h2>
+            <p>
+              Tell us what you're building, or book thirty minutes and talk it through. No pitch
+              deck. You'll be talking to the person who would actually do the work.
+            </p>
+            <div class="fq-btn-row">
+              <a class="fq-btn fq-btn--on-ink fq-btn--lg" href="contact.html#schedule">
+                <i class="fas fa-calendar-check" aria-hidden="true"></i> Book a 30-min call
               </a>
-            </li>
-            <li>
-              <a href="https://github.com/sasiperi" class="text-decoration-none">
-                <i class="fab fa-github fa-lg text-dark mx-2"></i>
+              <a class="fq-btn fq-btn--on-ink-outline fq-btn--lg" href="contact.html">
+                Send a message
               </a>
-            </li>
-            <li>
-              <a href="https://x.com/speri350" class="text-decoration-none mb-2">
-                <i class="fab fa-square-x-twitter fa-lg text-dark mx-2"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ==================== FOOTER (identical on every page) ==================== -->
+    <footer class="fq-footer">
+      <div class="fq-wrap">
+        <div class="fq-footer__grid">
+          <div class="fq-footer__brand">
+            <img src="images/4thQuest-Logo-BrandBlue.png" alt="Fourth Quest" width="147" height="34" />
+            <p class="fq-footer__tagline">Quest beyond the basic needs.</p>
+            <div class="fq-social">
+              <a
+                href="https://www.linkedin.com/company/fourth-quest-llc/about/"
+                target="_blank"
+                rel="noopener"
+                aria-label="Fourth Quest on LinkedIn"
+              >
+                <i class="fab fa-linkedin" aria-hidden="true"></i>
               </a>
-            </li>
+              <a
+                href="https://github.com/sasiperi"
+                target="_blank"
+                rel="noopener"
+                aria-label="Fourth Quest on GitHub"
+              >
+                <i class="fab fa-github" aria-hidden="true"></i>
+              </a>
+              <a
+                href="https://www.youtube.com/@4thquest"
+                target="_blank"
+                rel="noopener"
+                aria-label="Fourth Quest on YouTube"
+              >
+                <i class="fab fa-youtube" aria-hidden="true"></i>
+              </a>
+              <a
+                href="https://x.com/speri350"
+                target="_blank"
+                rel="noopener"
+                aria-label="Fourth Quest on X"
+              >
+                <i class="fab fa-square-x-twitter" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h3>Build</h3>
+            <ul>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="open-source.html">Open Source</a></li>
+              <li><a href="services.html">Services</a></li>
             </ul>
           </div>
-      </div>  
-    </div>
-  </footer>
 
-    <div class="container">
-      <hr/>
-      <p class="text-center">&copy; 2024 - 2025 Fourth Quest, LLC. All rights reserved</p>
-      <p class="text-center"> 
-        <a href="#" class="px-3">Terms of use</a>
-        <a href="#" class="px-3">Privacy</a>
-      </p>
-    </div>
+          <div>
+            <h3>Learn</h3>
+            <ul>
+              <li><a href="training.html">Training</a></li>
+              <li><a href="talks.html">Talks &amp; Content</a></li>
+              <li>
+                <a href="https://sasiperi.github.io/blog/" target="_blank" rel="noopener">Blog</a>
+              </li>
+              <li>
+                <a
+                  href="https://www.udemy.com/courses/search/?price=price-free&amp;q=%22sasi+peri%22&amp;sort=relevance&amp;src=ukw"
+                  target="_blank"
+                  rel="noopener"
+                  >Udemy courses</a
+                >
+              </li>
+            </ul>
+          </div>
 
-    <button id="to-top" class="to-top-btn">
-      <img src="images/up-arrow.png" alt="" />
+          <div>
+            <h3>Company</h3>
+            <ul>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="contact.html#schedule">Book time</a></li>
+              <li><a href="mailto:sp.fourth.quest@gmail.com">Email us</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="fq-footer__base">
+          <p>&copy; 2024–2026 Fourth Quest, LLC. All rights reserved.</p>
+          <nav aria-label="Legal">
+            <a href="#">Terms of use</a>
+            <a href="#">Privacy</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+    <button class="fq-totop" type="button" aria-label="Back to top">
+      <i class="fas fa-arrow-up" aria-hidden="true"></i>
     </button>
 
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/script.js"></script>
-    <script data-cfasync="false" type="text/javascript" src="./js/form-submission-handler.js"></script>
+    <script src="js/fq.js"></script>
   </body>
 </html>
