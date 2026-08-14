@@ -1289,6 +1289,13 @@ a.fq-spec__row:hover {
   white-space: nowrap;
 }
 
+/* For values too long to hold one line, e.g. a list of venues. */
+.fq-spec__val--wrap {
+  white-space: normal;
+  line-height: 1.5;
+  max-width: 62%;
+}
+
 /* Compact page hero for interior pages */
 .fq-pagehead {
   position: relative;
